@@ -5,10 +5,31 @@ import makingDifferenceImg from "../assets/making a difference.jpg"
 import alwaysThereImg from "../assets/always there.jpg"
 import StoryReels from "../components/StoryReels"
 import { Link } from "react-router-dom"
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
    return (
       <>
+         <Helmet>
+            <title>Oladosu Charity Foundation: Empowering Rural Communities and Changing Lives</title>
+            <meta name="description" content="Oladosu Charity Foundation is dedicated to uplifting rural communities in Nigeria through initiatives in education, health, and social welfare." />
+            <meta name="keywords" content="charity, foundation, rural communities, Nigeria, social impact, non-profit" />
+            <meta name="author" content="Oladosu Charity Foundation" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            
+            {/* Open Graph */}
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content="Oladosu Charity Foundation | Empowering Rural Communities and Changing Lives" />
+            <meta property="og:description" content="Learn more about our work in uplifting rural communities in Nigeria through charity projects and social impact initiatives." />
+            <meta property="og:image" content={makingDifferenceImg} />
+            <meta property="og:url" content="https://oladosufoundation.org.ng/" />
+            
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content="Oladosu Charity Foundation | Empowering Rural Communities and Changing Lives" />
+            <meta name="twitter:description" content="Discover how Oladosu Charity Foundation is making a difference in rural Nigerian communities through charitable initiatives." />
+            <meta name="twitter:image" content={makingDifferenceImg} />
+         </Helmet>
+      
          <section className="w-full grid grid-cols-1 md:grid-cols-2 md:items-center gap-8 min-h-[calc(100vh-80px)] py-8">
             <div className="col-span-1 flex flex-col justify-center items-start gap-6 md:gap-8">
                <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-[3.25rem] leading-[1.4] tracking-tight font-bold text-zinc-800">
@@ -76,14 +97,14 @@ const Home = () => {
                   <div className="w-1/5 h-1 rounded-sm bg-amber-500 mt-6" />
                </div>
                <p className="text-lg font-medium text-zinc-600">
-                  We are a non-govermental organization dedicated to the betterment of human 
-                  lives in rural areas.
+                  We are a non-governmental organization focused on improving lives 
+                  in rural communities.
                </p>
                <p className="text-lg font-medium text-zinc-600">
-                  The abundant life begins from within and then moves outward to other individuals. 
-                  If there is richness and righteousness in us, then we can make a difference in the lives
-                  of others, just as key individuals have influenced the lives of each of us for good and made us 
-                  richer than we otherwise would have been.
+                  At Oladosu Foundation, we believe true change starts within, 
+                  radiating outward to uplift others. With integrity and compassion, 
+                  we aim to positively impact lives, inspired by the powerful influence 
+                  of those who have enriched our own journeys.
                </p>
                <div className="flex gap-4">
                   <a href="#stories">
@@ -108,11 +129,10 @@ const Home = () => {
                   <div className="w-1/5 h-1 rounded-sm bg-amber-500 mt-6" />
                </div>
                <p className="text-lg font-medium text-zinc-600">
-                  What counts in life is not the fact that we have lived.
-                  It is what difference we have made to the lives of others
-                  that will determine the significance of the live we live.
-                  Change will not come if we wait for some othe time. We are the ones 
-                  we've been waiting for. We are the change that we seek.
+                  True significance in life comes from the difference we make in others' lives. 
+                  Lasting change doesn't come from waiting—it begins with us. At Oladosu Fondation, 
+                  we believe in being the change we seek, creating a brighter future through our 
+                  actions.
                </p>
                <Link to="/donate">
                   <Button>Donate Now</Button>
